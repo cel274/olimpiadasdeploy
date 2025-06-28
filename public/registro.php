@@ -12,14 +12,16 @@ session_start();
 </head>
 <body>
   <header class="header">
-    <nav class="nav" style="margin-right: 45px;">
-      <a href="loginUI.php">Login</a>
+    <nav class="nav" style="margin-left: 20px;">
       <a href="index.php">Inicio</a>
+      <a href="loginUI.php">Login</a>
     </nav>
   </header>
+
   <div class="login-container">
     <img src="imgs/logo.png" alt="Logo" class="logo">
     <h1 class="title">Agencia de Viajes</h1>
+
     <?php
     if (isset($_SESSION['register_error'])) {
         echo "<p style='color:red'>" . $_SESSION['register_error'] . "</p>";
@@ -30,11 +32,17 @@ session_start();
         unset($_SESSION['register_success']);
     }
     ?>
+
     <form class="login-form" action="autentificar_registro.php" method="POST">
       <label for="usuario">Usuario</label>
       <input type="text" id="usuario" name="usuario" required>
+
       <label for="clave">Contraseña</label>
       <input type="password" id="clave" name="clave" required>
+
+      <label for="confirmar_clave">Confirmar contraseña</label>
+      <input type="password" id="confirmar_clave" name="confirmar_clave" required>
+
       <button type="submit">Registrarse</button>
     </form>
   </div>
