@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+      font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #E4E9F7;
+    text-align: center;
+    width: 100%;
+    
+}
+.container{
+    display: inline-block; 
+  padding: 0 0 20px 0;
+  margin-top: 10% ;
+  border: 2px solid #1d1773;
+  border-radius: 8px; 
+  background-color: #e6eaf7;
+}
+.table-centro{
+    margin: 0 auto;         
+    width: 50%;             
+    border-collapse: collapse;
+    border: 1px solid  #261e7e;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+}
+.table-centro th,
+.table-centro td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+.boton-carrito{
+    background-color: #261e7e;
+    color: #FFF;
+  border: none;
+    border-radius: 5px;
+    border-color: #261e7e;
+    box-shadow: none;
+    outline: none;
+  padding: 3px 6px;
+  cursor: pointer;
+
+}
+.boton-carrito:hover{
+    background-color: #3a3578;
+}
+button{
+      background-color: #261e7e;
+    color: #FFF;
+  border: none;
+    border-radius: 5px;
+    border-color: #261e7e;
+    box-shadow: none;
+    outline: none;
+  padding: 3px 6px;
+  cursor: pointer;
+
+}
+button:hover{
+    background-color: #3a3578;
+    
+}
+.mensaje-oculto{
+    opacity: 0;
+}
+.mensaje-visible{
+    opacity: 1;
+}
