@@ -1,27 +1,32 @@
 FROM php:8.2-apache
 
-# Instala extensiones necesarias
+# Instalar dependencias del sistema necesarias para GD, ZIP y Composer
 RUN apt-get update && apt-get install -y \
-    libzip-dev \
     libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libzip-dev \
     unzip \
     zip \
-    && docker-php-ext-install zip gd
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd zip
 
-# Habilita mod_rewrite si usás URLs limpias
+# Habilitar mod_rewrite para Apache si usás URLs limpias
 RUN a2enmod rewrite
 
-# Instala Composer
+# Copiar Composer desde la imagen oficial
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copia los archivos al contenedor
+# Copiar todos los archivos del proyecto
 COPY . /var/www/html/
 
-# Establece el directorio de trabajo
+# Establecer el directorio de trabajo
 WORKDIR /var/www/html/
 
-# Instala dependencias de Composer si hay
-RUN composer install --no-interaction --prefer-dist
+# Instalar dependencias PHP del proyecto
+RUN composer install --no-interaction --prefer-dist || true
 
-# Exponer el puerto por si hace falta
+# Dar permisos a Apache
+RUN chown -R www-data:www-data /var/www/html
+
 EXPOSE 80
