@@ -6,7 +6,7 @@ use Endroid\QrCode\Writer\PngWriter;
 
 require 'vendor/autoload.php';
 session_start();
-$mysqli = new mysqli("localhost", "root", "", "agvi");
+$mysqli = new mysqli("nozomi.proxy.rlwy.net", "root", "zjOHqXFxmUwzcwlpFabmSeHzyxZkhZIb", "agvi", "16460");
 if ($mysqli->connect_error) {
     die("Error de conexión: " . $mysqli->connect_error);
 }
