@@ -1,4 +1,3 @@
-<link rel="icon" href="imgs/logo.png" type="image/png">
 <?php
 session_start();
 include("agvi_db.php");
@@ -155,6 +154,7 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="icon" href="imgs/logo.png" type="image/png">
 <meta charset="UTF-8" />
 <title>Administrar Viajes</title>
 <style>
