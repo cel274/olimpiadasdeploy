@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     zip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd zip
+    && docker-php-ext-install gd zip mysqli
 
 # Habilitar mod_rewrite para Apache si usás URLs limpias
 RUN a2enmod rewrite
