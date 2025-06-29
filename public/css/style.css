@@ -152,7 +152,7 @@ header .image-text .profession {
 
 .sidebar header .toggle {
     position: absolute;
-    top: 50%;
+    top: 145%;
     right: -25px;
     transform: translateY(-50%) rotate(180deg);
     height: 25px;
@@ -418,25 +418,4 @@ footer > p {
 
 div.card > button:hover {
     cursor: pointer;
-}
-@media (max-width: 768px) {
-    .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .card {
-        width: 90%;
-        max-width: 400px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        padding: 15px;
-        box-sizing: border-box;
-        text-align: center;
-    }
 }
