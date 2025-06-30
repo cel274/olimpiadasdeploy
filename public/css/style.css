@@ -419,3 +419,8 @@ footer > p {
 div.card > button:hover {
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .cards {
+        padding-left: 50px;
+    }
+}
