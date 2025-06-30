@@ -423,4 +423,7 @@ div.card > button:hover {
     .cards {
         padding-left: 50px;
     }
+    .sidebar header .toggle{
+        visibility: hidden;
+    }
 }
